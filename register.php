@@ -9,6 +9,8 @@ $xml->addChild('username', $username);
 $xml->addChild('password', $password);
 $xml->addChild('email', $email);
 // Create SOAP client and send the request
+echo realpath("user_registration.wsdl");
+
 try {
 $client = new SoapClient("user_registration.wsdl");
 $response = $client->registerUser($xml->asXML());
