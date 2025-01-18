@@ -9,23 +9,21 @@ $xml->addChild('username', $username);
 $xml->addChild('password', $password);
 $xml->addChild('email', $email);
 // Create SOAP client and send the request
-echo realpath("user_registration.wsdl");
+//echo realpath("user_registration.wsdl");
 
-try {
+//echo file_get_contents("user_registration.wsdl");
+
 $client = new SoapClient("user_registration.wsdl");
 $response = $client->registerUser($xml->asXML());
 echo "<h2>$response</h2>";
-} catch (Exception $e) {
-echo "<h2>Error: "
-. $e->getMessage() . "</h2>";
-}
+
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF‐8">
-<meta name="viewport" content="width=device‐width, initial‐scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Registration Form</title>
 </head>
 <body>
