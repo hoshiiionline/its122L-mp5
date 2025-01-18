@@ -1,4 +1,3 @@
-register.php
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $username = $_POST['username'];
@@ -6,17 +5,17 @@ $password = $_POST['password'];
 $email = $_POST['email'];
 // Create XML data
 $xml = new SimpleXMLElement('<user></user>');
-$xml‐>addChild('username', $username);
-$xml‐>addChild('password', $password);
-$xml‐>addChild('email', $email);
+$xml->addChild('username', $username);
+$xml->addChild('password', $password);
+$xml->addChild('email', $email);
 // Create SOAP client and send the request
 try {
 $client = new SoapClient("user_registration.wsdl");
-$response = $client‐>registerUser($xml‐>asXML());
+$response = $client->registerUser($xml->asXML());
 echo "<h2>$response</h2>";
 } catch (Exception $e) {
 echo "<h2>Error: "
-. $e‐>getMessage() . "</h2>";
+. $e->getMessage() . "</h2>";
 }
 }
 ?>
