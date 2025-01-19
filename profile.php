@@ -42,9 +42,9 @@ if (isset($_SESSION['userID']) && is_numeric($_SESSION['userID'])) {
 <body>
     <h2>My Profile</h2>
     <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" value="<?php echo $username?>" required><br><br>
+    <h3><?php $username?></h3>
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" value="<?php echo $email?>" required><br><br>
+    <h3><?php $email?></h3>
     <button type="button" name="log-out" onclick="return confirmLogOut()">Log Out</button>
     <button type="button" name="view-users" onclick="return confirmViewUsers()">View Users</button>
     <script src="script.js"></script>
