@@ -30,6 +30,7 @@
 
     <message name="loginUserResponse">
         <part name="response" type="xsd:string"/>
+        <part name="sessionid" type="xsd:int"/>
     </message>
 
     <portType name="UserRegistrationPortType">

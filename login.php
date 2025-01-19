@@ -6,6 +6,7 @@ $email = $_POST['email'];
 $xml = new SimpleXMLElement('<user></user>');
 $xml->addChild('password', $password);
 $xml->addChild('email', $email);
+$xml->addChild('password', $password);
 // Create SOAP client and send the request
 //echo realpath("user_registration.wsdl");
 
@@ -13,12 +14,13 @@ $xml->addChild('email', $email);
 
 $client = new SoapClient("user_registration.wsdl");
 $response = $client->loginUser($xml->asXML());
-echo "<h2>$response</h2>";
+echo "<h2>". $response['response'] ."</h2>";
 
-if($response == "Login successful!") {
+if($response['response'] == "Login successful!") {
+    session_start();
+    $_SESSION['userID'] = $response['sessionid'];
     header("Location: profile.php");
-}
-}
+}}
 ?>
 <!DOCTYPE html>
 <html lang="en">

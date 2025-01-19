@@ -75,11 +75,14 @@ public function loginUser($xml) {
             $stmt->bindParam(':email', $email);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
-            $userID = $result['id'];
-            $_SESSION['userID'] = $userID;
-            return "Login successful!";
+            return [
+                'response' => "Login successful!",
+                'sessionid' => $result['id']
+            ];
         } else {
-            return "Error: Invalid username or password.";
+            return [
+                'response' => "Login successful!",
+            ];
         }
     }
     return "Database connection error.";
