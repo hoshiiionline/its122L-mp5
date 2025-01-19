@@ -6,6 +6,7 @@ $server = new SoapServer("user_registration.wsdl");
 // Register the class that handles registration
 $server->setClass("UserRegistration");
 $server->handle();
+
 class UserRegistration {
 // Database connection parameters
 private $host = 'localhost';
@@ -25,6 +26,7 @@ echo "Connection failed: "
 return null;
 }
 }
+
 // Method to register a new user
 public function registerUser($xml) {
 // Parse XML data
@@ -51,5 +53,38 @@ return "Error: Could not register user.";
 }
 return "Database connection error.";
 }
+
+// method to authenticate a user
+public function loginUser($xml) {
+    // Parse XML data
+    $userData = simplexml_load_string($xml);
+    $email = (string)$userData->email;
+    $password = (string)$userData->password;
+
+    // Connect to the database
+    $conn = $this->connect();
+    if ($conn) {
+        // Prepare and execute SQL query
+        $stmt = $conn->prepare("SELECT password FROM users WHERE email = :email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($result && password_verify($password, $result['password'])) {
+            $stmt = $conn->prepare("SELECT id FROM users WHERE email = :email");
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            $userID = $result['id'];
+            $_SESSION['userID'] = $userID;
+            return "Login successful!";
+        } else {
+            return "Error: Invalid username or password.";
+        }
+    }
+    return "Database connection error.";
 }
+}
+
+
 ?>
