@@ -1,6 +1,7 @@
 <?php
 // Enable SOAP server
 ini_set("soap.wsdl_cache_enabled", "0"); // Disable WSDL cache for development
+header('Content-Type: application/xml');
 $server = new SoapServer("user_registration.wsdl");
 // Register the class that handles registration
 $server->setClass("UserRegistration");
