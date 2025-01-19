@@ -12,7 +12,7 @@ $xml->addChild('email', $email);
 //echo file_get_contents("user_registration.wsdl");
 
 $client = new SoapClient("user_registration.wsdl");
-$response = $client->registerUser($xml->asXML());
+$response = $client->loginUser($xml->asXML());
 echo "<h2>$response</h2>";
 
 if($response == "Login successful!") {

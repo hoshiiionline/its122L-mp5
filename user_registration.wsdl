@@ -23,10 +23,26 @@
         <part name="response" type="xsd:string"/>
     </message>
 
+    <message name="loginUserRequest">
+        <part name="username" type="xsd:string"/>
+        <part name="email" type="xsd:string"/>
+    </message>
+
+    <message name="loginUserResponse">
+        <part name="response" type="xsd:string"/>
+    </message>
+
     <portType name="UserRegistrationPortType">
         <operation name="registerUser">
             <input message="tns:registerUserRequest"/>
             <output message="tns:registerUserResponse"/>
+        </operation>
+    </portType>
+
+    <portType name="UserLoginPortType">
+        <operation name="loginUser">
+            <input message="tns:loginUserRequest"/>
+            <output message="tns:loginUserResponse"/>
         </operation>
     </portType>
 
@@ -43,8 +59,28 @@
         </operation>
     </binding>
 
+    <binding name="UserLoginBinding" type="tns:UserLoginPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="loginUser">
+            <soap:operation soapAction="urn:#loginUser"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    
+
     <service name="UserRegistrationService">
         <port name="UserRegistrationPort" binding="tns:UserRegistrationBinding">
+            <soap:address location="http://127.0.0.1:80/soap_server.php"/>
+        </port>
+    </service>
+
+    <service name="UserLoginService">
+        <port name="UserLoginPort" binding="tns:UserLoginBinding">
             <soap:address location="http://127.0.0.1:80/soap_server.php"/>
         </port>
     </service>
