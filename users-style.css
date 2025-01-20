@@ -60,3 +60,46 @@ td {
 tr:last-child td {
     border-bottom: none;
 }
+
+/* General button styles */
+button {
+    font-family: 'Sora', sans-serif; /* Font for all buttons */
+    font-size: 16px; /* Font size */
+    padding: 10px 20px; /* Padding for better dimensions */
+    border: none; /* Remove borders */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Log Out button */
+.log-out-button {
+    background-color: #ff4d4d; /* Bright red background */
+    color: white; /* White text */
+}
+
+.log-out-button:hover {
+    background-color: #e60000; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.log-out-button:active {
+    background-color: #cc0000; /* Even darker red on click */
+    transform: scale(0.95); /* Slight pressed effect */
+}
+
+/* View Users button */
+.view-users-button {
+    background-color: #4da6ff; /* Bright blue background */
+    color: white; /* White text */
+}
+
+.view-users-button:hover {
+    background-color: #0073e6; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.view-users-button:active {
+    background-color: #0059b3; /* Even darker blue on click */
+    transform: scale(0.95); /* Slight pressed effect */
+}
