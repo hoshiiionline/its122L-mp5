@@ -1,0 +1,168 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fjalla One', sans-serif;
+    scroll-behavior: smooth;
+    color:black;
+    
+
+    overflow-x: hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+.landing-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(registerbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.landing-content {
+    z-index: 2;
+    background: transparent;
+    padding: 20px 40px;
+    border-radius: 12px;
+}
+
+.landing-heading {
+    font-size: 100px;
+    font-weight: 700;
+    padding-right: 450px;
+    margin: 0;
+    
+    margin-bottom: -140px;
+}
+
+.landing-subheading {
+    font-family: 'Inter';
+    font-size: 17px;
+    font-weight: 300;
+    padding-right: 900px;
+    margin: 20px 0;
+}
+
+.scroll-indicator {
+    font-family: Inter;
+    font-size: 35px;
+    font-weight: lighter;
+    color: #000000;
+    padding-right:550px;
+    margin-top: 20px;
+    animation: bounce 2.0s infinite;
+    
+}
+
+/* Bounce Animation for Scroll Indicator */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    border-radius: 15px;
+    margin: 0 auto;
+    flex-direction:row;
+    margin-bottom: 250px;
+    padding-right: 400px;
+    padding-left:300px;
+    text-align: center;
+    align-items: center;
+    height:100vh;
+    min-height: 100vh;
+    background-image: url(bgext.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.left-side {
+    width: 50%;
+    padding: 20px;
+    background-color: #ed800c; /* Blue background for left section */
+    color: #fff;
+    text-align: left;
+    max-height: 50%;
+    height:400px;
+   
+}
+.left-side h2{
+    font-size:40px;
+}
+.left-side p {
+    font-family: Inter;
+    font-weight:700px;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align:justify
+}
+
+.left-side label, 
+.left-side input {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+.left-side input[type="submit"] {
+    font-size: 1.5em;
+    width: auto;
+    margin-top: 20px;
+    
+}
+.right-side {
+    width: 50%;
+    padding: 20px;
+    background-color: #2c6fb7; /* Blue background for left section */
+    color: #fff;
+    text-align: left;
+    max-height: 50%;
+    height:400px;
+
+}
+
+
+.form-style{
+  font-size:30px;  
+}
+
+.register-form label {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.register-form input {
+    width: 30%;
+    padding: -10px;
+    margin-bottom: -25px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+}
+
+.register-form submit{
+    font-family:Fjalla One;
+    background-color: #fff;
+    color: #2c6fb7;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}

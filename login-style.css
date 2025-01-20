@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    font-family: Fjalla One;
+    background-color: #f4f4f9; /* Light background for better contrast */
+    background-image:url(userbg.jpg)
+}
+
+h1{
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: -15px;
+    color: #333;
+}
+h2 {
+    font-size:35px;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background-color: #fff; /* White background for the form */
+    padding: 20px 30px; /* Inner padding for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px; /* Limit the form width */
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width of the input fields */
+    padding: 10px; /* Add padding inside the inputs */
+    margin: 8px 0; /* Add spacing between inputs */
+    border: 1px solid #ccc; /* Border around inputs */
+    border-radius: 10px; /* Rounded edges */
+    box-sizing: border-box; /* Prevent width issues with padding */
+}
+
+input[type="submit"] {
+    background-color: #4da6ff; /* Bright blue background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded button */
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+
+}
+
+.landing-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.landing-content {
+    z-index: 2;
+    background: transparent;
+    padding: 20px 40px;
+    border-radius: 12px;
+}
+
+.landing-content{
+    font-family:Inter;
+}
+
+.landing-heading {
+    font-family: Fjalla One;
+    font-size: 100px;
+    font-weight: 700;
+    margin: 0;
+    
+    
+}
