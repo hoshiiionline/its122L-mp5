@@ -49,7 +49,7 @@ if($response['response'] == "Login successful!") {
             <input type="email" id="email" name="email" required><br><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" required><br><br>
-            <input type="submit" value="Register">
+            <input type="submit" value="Login">
             <h4>Don't have an account? <a href="register.php">Register Now!</a></h4>
         </form>
         </div>
