@@ -1,15 +1,72 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color:black;
+    overflow-x: hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
 .login-container {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #fbf7ff, #fc6d25);
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 40px;
     color: white;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 450px;
 }
 
 body.register {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+}
+
+.progress-bar {
+    width: 80%;
+    max-width: 400px;
+    height: 10px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto; 
+}
+.progress-bar span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #4caf50;
+    animation: load 1s linear forwards;
+}
+
+logout-message {
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 18px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.logout-message h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.logout-message p {
+    font-size: 16px;
+}
+.redirecting {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #777;
 }
 
 .progress-bar {
@@ -27,4 +84,16 @@ body.register {
     height: 100%;
     background: #4caf50;
     animation: load 1s linear forwards;
+}
+
+@keyframes load {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
 }

@@ -69,6 +69,7 @@ $result = mysqli_query($conn, "SELECT * FROM users ORDER BY id DESC");
         <br>
         <button type="button" name="log-out" class="log-out-button" onclick="return confirmLogOut()">Log Out</button>
         <button type="button" name="view-users" class="view-users-button" onclick="return confirmViewProfile()">View Profile</button>
+        <script src="script.js"></script>
     </div>
 </body>
 </html>

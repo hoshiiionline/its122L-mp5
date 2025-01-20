@@ -18,6 +18,6 @@ function confirmLogOut() {
     const confirm = window.confirm('Are you sure you want to log out?');
     if(confirm) {
         alert("Logging out...");
-        window.location.href = 'login.php';
+        window.location.href = 'logout.php';
     }
 }

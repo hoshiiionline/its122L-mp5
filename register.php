@@ -72,7 +72,7 @@ if ($response == "Registration successful!") {
                             <label for="email">Email:</label><br>
                             <input type="email" id="email" name="email" required><br><br>
                             <input type="submit" value="Register">
-                            <h4>Already have an account?<a href="register.php"> Log in now!</a></h4>
+                            <h4>Already have an account?<a href="login.php"> Log in now!</a></h4>
                         </form>
                     </div>
                 </div>
