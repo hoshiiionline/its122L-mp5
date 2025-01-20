@@ -50,6 +50,7 @@ if($response['response'] == "Login successful!") {
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" required><br><br>
             <input type="submit" value="Register">
+            <h4>Don't have an account? <a href="register.php">Register Now!</a></h4>
         </form>
         </div>
 
