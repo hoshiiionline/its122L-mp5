@@ -74,14 +74,13 @@ html,body{
     border-radius: 15px;
     margin: 0 auto;
     flex-direction:row;
-    margin-bottom: 250px;
     padding-right: 400px;
     padding-left:300px;
     text-align: center;
     align-items: center;
     height:100vh;
     min-height: 100vh;
-    background-image: url(bgext.jpg);
+    background-image: url(../assets/bgext.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -93,7 +92,7 @@ html,body{
     color: #fff;
     text-align: left;
     max-height: 50%;
-    height:400px;
+    height:450px;
    
 }
 .left-side h2{
@@ -129,7 +128,7 @@ html,body{
     color: #fff;
     text-align: left;
     max-height: 50%;
-    height:400px;
+    height:450px;
 
 }
 

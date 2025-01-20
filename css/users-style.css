@@ -70,6 +70,8 @@ button {
     border-radius: 25px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Log Out button */
@@ -102,4 +104,16 @@ button {
 .view-users-button:active {
     background-color: #0059b3; /* Even darker blue on click */
     transform: scale(0.95); /* Slight pressed effect */
+}
+
+.button-style{
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
 }

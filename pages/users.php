@@ -45,6 +45,12 @@ $result = mysqli_query($conn, "SELECT * FROM users ORDER BY id DESC");
     <div>
         <h3>Displaying all Registered users</h3>
         <h4>Current Log-in: <span style="color:brown;"><?php echo $username;?></span></h3>
+
+        <div class="button-container">
+            <button type="button" name="log-out" class="log-out-button" onclick="return confirmLogOut()">Log Out</button>
+            <button type="button" name="view-users" class="view-users-button" onclick="return confirmViewProfile()">View Profile</button>
+        </div>
+
         <table>
             <thead>
                 <tr>
@@ -67,8 +73,6 @@ $result = mysqli_query($conn, "SELECT * FROM users ORDER BY id DESC");
         </table>
         <br>
         <br>
-        <button type="button" name="log-out" class="log-out-button" onclick="return confirmLogOut()">Log Out</button>
-        <button type="button" name="view-users" class="view-users-button" onclick="return confirmViewProfile()">View Profile</button>
         <script src="../js/script.js"></script>
     </div>
 </body>
