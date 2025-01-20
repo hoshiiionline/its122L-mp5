@@ -1,5 +1,5 @@
 <?php
-require "config.php";
+require "../config.php";
 
 $username = "";
 $email = "";
@@ -38,7 +38,7 @@ if (isset($_SESSION['userID']) && is_numeric($_SESSION['userID'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
-    <link href="profile-style.css" rel="stylesheet" type="text/css">
+    <link href="../css/profile-style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -58,7 +58,7 @@ if (isset($_SESSION['userID']) && is_numeric($_SESSION['userID'])) {
             <button type="button" name="log-out" class="log-out-button" onclick="return confirmLogOut()">Log Out</button>
             <button type="button" name="view-users" class="view-users-button" onclick="return confirmViewUsers()">View Users</button>
 
-            <script src="script.js"></script>
+            <script src="../js/script.js"></script>
         </div>
     </div>
     

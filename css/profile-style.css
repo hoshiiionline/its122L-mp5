@@ -20,7 +20,7 @@ html,body{
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
-    background-image: url(profilebg.jpg);
+    background-image: url(../assets/profilebg.jpg);
 }
 
 .landing-content {

@@ -1,6 +1,6 @@
 <?php 
 
-require "config.php";
+require "../config.php";
 
 if (isset($_SESSION['userID']) && is_numeric($_SESSION['userID'])) {
     if ($stmt = $conn->prepare("SELECT username FROM users WHERE id = ?")) {
@@ -35,7 +35,7 @@ $result = mysqli_query($conn, "SELECT * FROM users ORDER BY id DESC");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Users</title>
-    <link href="users-style.css" rel="stylesheet" type="text/css">
+    <link href="../css/users-style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -69,7 +69,7 @@ $result = mysqli_query($conn, "SELECT * FROM users ORDER BY id DESC");
         <br>
         <button type="button" name="log-out" class="log-out-button" onclick="return confirmLogOut()">Log Out</button>
         <button type="button" name="view-users" class="view-users-button" onclick="return confirmViewProfile()">View Profile</button>
-        <script src="script.js"></script>
+        <script src="../js/script.js"></script>
     </div>
 </body>
 </html>

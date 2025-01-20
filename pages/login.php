@@ -12,7 +12,7 @@ $xml->addChild('password', $password);
 
 //echo file_get_contents("user_registration.wsdl");
 
-$client = new SoapClient("user_registration.wsdl");
+$client = new SoapClient("../user_registration.wsdl");
 $response = $client->loginUser($xml->asXML());
 echo "<h2>". $response['response'] ."</h2>";
 
@@ -28,7 +28,7 @@ if($response['response'] == "Login successful!") {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login Form</title>
-        <link href="login-style.css" rel="stylesheet" type="text/css">
+        <link href="../css/login-style.css" rel="stylesheet" type="text/css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
